@@ -1,0 +1,12 @@
+# Install gfortran etc.
+# https://fortran-lang.org/en/learn/os_setup/install_gfortran/
+# https://code.visualstudio.com/docs/cpp/config-mingw#_installing-the-mingww64-toolchain
+# Add C:\msys64\ucrt64\bin in PATH
+
+# Add vscode extensions
+Modern Fortran
+C/C++
+
+# Add packages
+pip install fortls
+pip install fprettify
