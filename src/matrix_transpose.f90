@@ -13,11 +13,13 @@ program matrix_transpose
    integer, dimension(4, 3) :: b
    integer :: i, j
 
-   do i = lbound(a, 1), ubound(a, 1)
-      do j = lbound(b, 1), ubound(b, 1)
-         a(i, j) = i + 10*j
-      end do
-   end do
+!    do i = lbound(a, 1), ubound(a, 1)
+!       do j = lbound(b, 1), ubound(b, 1)
+!          a(i, j) = i + 10*j
+!       end do
+!    end do
+
+   a = reshape([((i + 10*j, j=lbound(b, 1), ubound(b, 1)), i=lbound(a, 1), ubound(a, 1))], shape(a))
 
    call write_matrix(a)
    b = transpose(a)
